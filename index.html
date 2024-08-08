@@ -22,10 +22,11 @@
       transform: translateX(-50%);
       width: 60px;
       height: 60px;
-      background-image: url('your-logo-url');
+      background-image: url('https://example.com/logo.png');
       background-size: contain;
       background-repeat: no-repeat;
       border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
     
     .dark-mode-switch {
@@ -35,18 +36,22 @@
       cursor: pointer;
     }
     
-    .dark-mode-switch span {
-      display: block;
-      width: 20px;
-      height: 20px;
+    .dark-mode-switch button {
       background-color: #fff;
+      border: none;
+      padding: 10px;
       border-radius: 50%;
-      margin-bottom: 10px;
-      transition: background-color 0.4s;
+      cursor: pointer;
     }
     
-    .dark-mode-switch span:nth-child(2) {
+    .dark-mode-switch button:hover {
       background-color: #333;
+      color: #fff;
+    }
+    
+    .dark-mode-switch button svg {
+      width: 20px;
+      height: 20px;
     }
     
     body.dark-mode {
@@ -54,12 +59,9 @@
       color: #fff;
     }
     
-    body.dark-mode .dark-mode-switch span {
+    body.dark-mode .dark-mode-switch button {
       background-color: #333;
-    }
-    
-    body.dark-mode .dark-mode-switch span:nth-child(2) {
-      background-color: #fff;
+      color: #fff;
     }
     
     .social-links {
@@ -85,8 +87,11 @@
 <body>
   <div class="logo"></div>
   <div class="dark-mode-switch">
-    <span></span>
-    <span></span>
+    <button>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 18H6V6H12V18ZM12 6V18" />
+      </svg>
+    </button>
   </div>
   <div class="social-links">
     <a href="https://t.me/your-telegram-username" target="_blank">
@@ -105,5 +110,11 @@
   <h1 style="font-variant: small-caps;">Welcome to my portfolio!</h1>
   <p style="font-variant: small-caps;">This is a showcase of my projects and skills.</p>
   <!-- Add your content here -->
+  <script>
+    const darkModeSwitch = document.querySelector('.dark-mode-switch button');
+    darkModeSwitch.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
