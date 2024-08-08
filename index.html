@@ -1,183 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f4f4f4;
-            transition: background-color 0.3s ease;
-        }
-        body.dark {
-            color: #ddd;
-            background-color: #222;
-        }
-        h1 {
-            text-transform: small-caps;
-        }
-        .logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-image: url('logo.png');
-            background-size: cover;
-            border: 2px solid #333;
-        }
-        .dark .logo {
-            border: 2px solid #ddd;
-        }
-        <!-- Add a toggle switch to the header -->
-<header>
-  <nav>
-    <ul>
-      <li><a href="#" class="logo"><img src="logo.png" alt="Logo"></a></li>
-      <li>
-        <label class="switch">
-          <input type="checkbox" id="dark-mode-toggle">
-          <span class="slider round"></span>
-        </label>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<!-- Add some CSS to style the toggle switch -->
-<style>
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-  }
-  
-  .switch input[type="checkbox"] {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 0;
-    bottom: 0;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: 0.4s;
-  }
-  
-  .slider.round {
-    border-radius: 20px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  
-  input[type="checkbox"]:checked + .slider {
-    background-color: #333;
-  }
-  
-  input[type="checkbox"]:checked + .slider:before {
-    transform: translateX(20px);
-  }
-  
-  /* Add some CSS to toggle the dark mode */
-  body {
-    transition: background-color 0.4s;
-  }
-  
-  body.dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  body.dark-mode .hero {
-    background-image: linear-gradient(to bottom, #555, #777);
-  }
-  
-  body.dark-mode .social-links {
-    background-color: #333;
-  }
-  
-  body.dark-mode .social-links a {
-    color: #fff;
-  }
-</style>
-
-<!-- Add some JavaScript to toggle the dark mode -->
-<script>
-  const darkModeToggle = document.getElementById('dark-mode-toggle');
-  
-  darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
-</script>
-        .social-links {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: space-around;
-            width: 200px;
-        }
-        .social-links a {
-            text-decoration: none;
-            color: #333;
-            font-size: 24px;
-            margin: 0 10px;
-        }
-        .social-links a:hover {
-            color: #666;
-        }
-        .dark .social-links a {
-            color: #ddd;
-        }
-        .dark .social-links a:hover {
-            color: #bbb;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your GitHub Pages Site</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap">
+  <style>
+    /* Add some basic styling to our HTML elements */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.4s;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+      position: relative;
+    }
+    
+    header nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    header nav ul li {
+      margin-right: 20px;
+    }
+    
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    header nav a:hover {
+      color: #ccc;
+    }
+    
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .toggle-theme {
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    
+    .toggle-theme span {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    
+    .toggle-theme span:nth-child(2) {
+      background-color: #333;
+    }
+    
+    .hero {
+      background-image: linear-gradient(to bottom, #333, #555);
+      background-size: 100% 300px;
+      background-position: 0% 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+    
+    .small-caps {
+      font-variant: small-caps;
+    }
+    
+    .social-links {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .social-links a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    
+    .social-links a:hover {
+      color: #555;
+    }
+    
+    /* Add some CSS to style the toggle switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+    
+    .switch input[type="checkbox"] {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 0;
+      bottom: 0;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: 0.4s;
+    }
+    
+    .slider.round {
+      border-radius: 20px;
+    }
+    
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    
+    input[type="checkbox"]:checked + .slider {
+      background-color: #333;
+    }
+    
+    input[type="checkbox"]:checked + .slider:before {
+      transform: translateX(20px);
+    }
+    
+    /* Add some CSS to toggle the dark mode */
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    body.dark-mode .hero {
+      background-image: linear-gradient(to bottom, #555, #777);
+    }
+    
+    body.dark-mode .social-links {
+      background-color: #333;
+    }
+    
+    body.dark-mode .social-links a {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-    <div class="logo"></div>
-    <div class="theme-switch">
-        <i class="fas fa-sun" id="theme-icon"></i>
-    </div>
-    <h1>Welcome to my GitHub Page!</h1>
-    <div class="social-links">
-        <a href="https://t.me/your_telegram_link" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-        <a href="https://wa.me/your_whatsapp_number" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.facebook.com/your_facebook_link" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/your_instagram_link" target="_blank"><i class="fab fa-instagram"></i></a>
-    </div>
-    <script>
-        const themeIcon = document.getElementById('theme-icon');
-        themeIcon.addEventListener('click', () => {
-            document.body.classList.toggle('dark');
-            themeIcon.classList.toggle('fa-sun');
-            themeIcon.classList.toggle('fa-moon');
-        });
-    </script>
-</body>
-</html>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" class="logo"><img src="logo.png" alt="Logo"></a></li>
+        <li>
+          <label class="
