@@ -16,7 +16,6 @@
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      animation: fadeIn 2s; /* add fade-in animation to body */
     }
     
     .logo {
@@ -30,7 +29,6 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       overflow: hidden; /* add overflow hidden to contain the image */
       animation: bounceIn 2s; /* add bounce-in animation to logo */
-      animation-fill-mode: backwards;
     }
     
     .logo img {
@@ -48,9 +46,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      animation: slideInUp 2s;/* add slide-in-up animation to social links *
-      animation-fill-mode: backwards;
-      }
+    }
     
     .social-links a {
       margin-right: 20px;
@@ -71,7 +67,6 @@
       color: #fff; /* change text color to white */
       font-size: 18px; /* reduced font size */
       animation: fadeInUp 2s; /* add fade-in-up animation to header text */
-      animation-fill-mode: backwards;
     }
     
     .header-text h1, .header-text p {
@@ -79,15 +74,6 @@
     }
     
     /* Add animations */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    
     @keyframes bounceIn {
       0% {
         transform: scale(0.5);
@@ -95,17 +81,6 @@
       }
       100% {
         transform: scale(1);
-        opacity: 1;
-      }
-    }
-    
-    @keyframes slideInUp {
-      0% {
-        transform: translateY(100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
         opacity: 1;
       }
     }
