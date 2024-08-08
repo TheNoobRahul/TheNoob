@@ -1,5 +1,5 @@
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -60,29 +60,34 @@
     
     .header-text {
       position: absolute;
-      top: 120px;
+      top: 50%;
       left: 50%;
-      transform: translate(-50%, 0); /* update transform to use translate(-50%, 0) */
+      transform: translate(-50%, -50%);
       text-align: center;
       color: #fff; /* change text color to white */
-      font-size: 18px; /* reduced font size */
+      font-size: 24px; /* reduced font size */
     }
     
-    .header-text h1, .header-text p {
-      color: #fff; /* change text color to white */
+    .header-text h1 {
+      font-size: 28px;
+    }
+    
+    .header-text p {
+      font-size: 20px;
     }
     
     .quote {
       position: absolute;
-      top: 30%;
-      left: 25%;
+      top: 70%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      text-align: inherit;
+      text-align: center;
       color: #FFFFFF;
-      font-size: 24px;
+      font-size: 20px;
       font-style: small-caps;
     }
-      /* Media query for screens with a minimum width of 320px */
+    
+    /* Media query for screens with a minimum width of 320px */
     @media (max-width: 320px) {
       .logo {
         width: 80px;
@@ -90,14 +95,22 @@
       }
       
       .header-text {
+        font-size: 18px;
+      }
+      
+      .header-text h1 {
         font-size: 22px;
       }
       
-      .quote {
-        font-size: 28px;
-        top: 60%;
-        left: 50%;
+      .header-text p {
+        font-size: 18px;
       }
+      
+      .quote {
+        font-size: 16px;
+        top: 80%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -105,12 +118,11 @@
     <img src="https://graph.org//file/ef970b47124b6898c14fa.jpg" alt="Logo">
   </div>
   <div class="header-text">
-    <h1 style="font-variant: small-caps; font-size: 22px;">Welcome, This Is Rahul Kumar!</h1>
-    <p style="font-variant: small-caps; font-size: 18px;">This is a showcase of my projects and skills.</p>
+    <h1 style="font-variant: small-caps;">Welcome, This Is Rahul Kumar!</h1>
+    <p style="font-variant: small-caps;">This is a showcase of my projects and skills.</p>
   </div>
   <div class="quote">
-    <a href="https://t.me/noob_bholu" target="_blank">
-    <p style="font-style: small-caps; font-size: 18px;">Contact Me To Build This Type Web Page At Cheap Price</p>
+    <p style="font-style: small-caps;">Contact Me To Build This Type Web Page At Cheap Price</p>
   </div>
   <div class="social-links">
     <a href="https://t.me/itzme_dear" target="_blank">
