@@ -33,19 +33,106 @@
         .dark .logo {
             border: 2px solid #ddd;
         }
-        .theme-switch {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-        .theme-switch i {
-            font-size: 24px;
-            color: #333;
-        }
-        .dark .theme-switch i {
-            color: #ddd;
-        }
+        <!-- Add a toggle switch to the header -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="#" class="logo"><img src="logo.png" alt="Logo"></a></li>
+      <li>
+        <label class="switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider round"></span>
+        </label>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Add some CSS to style the toggle switch -->
+<style>
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  .slider.round {
+    border-radius: 20px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  input[type="checkbox"]:checked + .slider {
+    background-color: #333;
+  }
+  
+  input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  /* Add some CSS to toggle the dark mode */
+  body {
+    transition: background-color 0.4s;
+  }
+  
+  body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark-mode .hero {
+    background-image: linear-gradient(to bottom, #555, #777);
+  }
+  
+  body.dark-mode .social-links {
+    background-color: #333;
+  }
+  
+  body.dark-mode .social-links a {
+    color: #fff;
+  }
+</style>
+
+<!-- Add some JavaScript to toggle the dark mode -->
+<script>
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  
+  darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
         .social-links {
             position: fixed;
             bottom: 10px;
