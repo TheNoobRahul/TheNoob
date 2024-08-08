@@ -25,7 +25,7 @@
       transform: translateX(-50%);
       width: 60px;
       height: 60px;
-      border-radius: 50%;
+      border-radius: 70%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       overflow: hidden; /* add overflow hidden to contain the image */
     }
@@ -71,35 +71,13 @@
       color: #fff; /* change text color to white */
     }
     
-    .buttons {
+    .visitors-icon {
       position: absolute;
-      top: 180px;
+      bottom: 50px;
       left: 50%;
       transform: translateX(-50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .button {
-      background-color: #4CAF50;
+      font-size: 24px;
       color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    
-    .button:hover {
-      background-color: #3e8e41;
-    }
-    
-    .views-button {
-      margin-right: 20px;
-    }
-    
-    .likes-button {
-      margin-left: 20px;
     }
   </style>
 </head>
@@ -108,12 +86,11 @@
     <img src="https://graph.org//file/ef970b47124b6898c14fa.jpg" alt="Logo">
   </div>
   <div class="header-text">
-    <h1 style="font-variant: small-caps; font-size: 24px;">Welcome,This Is Rahul Kumar!</h1>
+    <h1 style="font-variant: small-caps; font-size: 24px;">Welcome, This Is Rahul Kumar!</h1>
     <p style="font-variant: small-caps; font-size: 18px;">This is a showcase of my projects and skills.</p>
   </div>
-  <div class="buttons">
-    <button class="button views-button">Views: 100</button>
-    <button class="button likes-button">Likes: 50</button>
+  <div class="visitors-icon">
+    <i class="fas fa-eye"></i> 100 visitors
   </div>
   <div class="social-links">
     <a href="https://t.me/your-telegram-username" target="_blank">
@@ -129,6 +106,5 @@
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/whatsapp.svg" alt="WhatsApp">
     </a>
   </div>
-  <!-- How are you guys -->
 </body>
 </html>
