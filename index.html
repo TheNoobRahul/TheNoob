@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,8 +25,26 @@
             left: 10px;
             width: 50px;
             height: 50px;
+            border-radius: 50%;
             background-image: url('logo.png');
             background-size: cover;
+            border: 2px solid #333;
+        }
+        .dark .logo {
+            border: 2px solid #ddd;
+        }
+        .theme-switch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .theme-switch i {
+            font-size: 24px;
+            color: #333;
+        }
+        .dark .theme-switch i {
+            color: #ddd;
         }
         .social-links {
             position: fixed;
@@ -39,7 +58,8 @@
         .social-links a {
             text-decoration: none;
             color: #333;
-            font-size: 2em;
+            font-size: 24px;
+            margin: 0 10px;
         }
         .social-links a:hover {
             color: #666;
@@ -54,19 +74,22 @@
 </head>
 <body>
     <div class="logo"></div>
+    <div class="theme-switch">
+        <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
     <h1>Welcome to my GitHub Page!</h1>
-    <button id="toggle-theme">Switch to dark mode</button>
     <div class="social-links">
-        <a href="https://t.me/your_telegram_link" target="_blank"><img src="telegram.png" alt="Telegram"></a>
-        <a href="https://wa.me/your_whatsapp_number" target="_blank"><img src="whatsapp.png" alt="WhatsApp"></a>
-        <a href="https://www.facebook.com/your_facebook_link" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/your_instagram_link" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+        <a href="https://t.me/your_telegram_link" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://wa.me/your_whatsapp_number" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/your_facebook_link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/your_instagram_link" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
     <script>
-        const toggleTheme = document.getElementById('toggle-theme');
-        toggleTheme.addEventListener('click', () => {
+        const themeIcon = document.getElementById('theme-icon');
+        themeIcon.addEventListener('click', () => {
             document.body.classList.toggle('dark');
-            toggleTheme.textContent = document.body.classList.contains('dark') ? 'Switch to light mode' : 'Switch to dark mode';
+            themeIcon.classList.toggle('fa-sun');
+            themeIcon.classList.toggle('fa-moon');
         });
     </script>
 </body>
