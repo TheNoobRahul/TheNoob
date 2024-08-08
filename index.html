@@ -12,11 +12,10 @@
       font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url('https://graph.org//file/7c966b01350d4416fbe12.jpg');
+      background-image: url('https://graph.org//file/0aa0ae4c569ce3f7f35a6.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      filter: blur(5px) brightness(0.5); /* blur and lighten the background image */
     }
     
     .logo {
@@ -24,8 +23,8 @@
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      width: 100px; /* increase the size of the logo circle */
-      height: 100px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       overflow: hidden; /* add overflow hidden to contain the image */
@@ -71,15 +70,50 @@
     .header-text h1, .header-text p {
       color: #fff; /* change text color to white */
     }
+    
+    .buttons {
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .button:hover {
+      background-color: #3e8e41;
+    }
+    
+    .views-button {
+      margin-right: 20px;
+    }
+    
+    .likes-button {
+      margin-left: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="logo">
-    <img src="https://graph.org//file/ef970b47124b6898c14fa.jpg" alt="Logo">
+    <img src="https://graph.org//file/7c966b01350d4416fbe12.jpg" alt="Logo">
   </div>
   <div class="header-text">
-    <h1 style="font-variant: small-caps; font-size: 24px;">Welcome,This Is Rahul Kumar!</h1>
+    <h1 style="font-variant: small-caps; font-size: 24px;">Welcome to my portfolio!</h1>
     <p style="font-variant: small-caps; font-size: 18px;">This is a showcase of my projects and skills.</p>
+  </div>
+  <div class="buttons">
+    <button class="button views-button">Views: 100</button>
+    <button class="button likes-button">Likes: 50</button>
   </div>
   <div class="social-links">
     <a href="https://t.me/your-telegram-username" target="_blank">
