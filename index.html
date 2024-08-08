@@ -65,6 +65,7 @@
       text-align: center;
       color: #fff; /* change text color to white */
       font-size: 18px; /* reduced font size */
+      animation: random-transition 2s infinite;
     }
     
     .header-text h1, .header-text p {
@@ -77,9 +78,27 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      color: #fff;
+      color: #FFFFFF;
       font-size: 24px;
-      font-style: italic;
+      font-style: small-caps;
+    }
+    
+    @keyframes random-transition {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(10px);
+      }
+      50% {
+        transform: translateX(-10px);
+      }
+      75% {
+        transform: translateX(5px);
+      }
+      100% {
+        transform: translateX(0);
+      }
     }
   </style>
 </head>
@@ -93,16 +112,10 @@
   </div>
   <div class="quote">
     <a href="https://t.me/noob_bholu" target="_blank">
-    <p style="font-style: italic; font-size: 12px;">Contact Me To Build This Type Web Page At Cheap Price</p>
+    <p style="font-style: small-caps; font-size: 18px;">Contact Me To Build This Type Web Page At Cheap Price</p>
   </div>
   <div class="social-links">
     <a href="https://t.me/itzme_dear" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/telegram.svg" alt="Telegram">
-    </a>
-    <a href="https://www.instagram.com/the_noob_rahul" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/instagram.svg" alt="Instagram">
-    </a>
-    <a href="https://www.facebook.com/" target="_blank">
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/facebook.svg" alt="Facebook">
     </a>
     <a href="https://wa.me/15512037143" target="_blank">
