@@ -12,10 +12,11 @@
       font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url('https://graph.org//file/35e84b5f54b786401fe2f.jpg');
+      background-image: url('https://graph.org//file/308ddf4a01a7aba40dfa6.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      animation: fadeIn 2s; /* add fade-in animation to body */
     }
     
     .logo {
@@ -28,6 +29,7 @@
       border-radius: 70%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       overflow: hidden; /* add overflow hidden to contain the image */
+      animation: bounceIn 2s; /* add bounce-in animation to logo */
     }
     
     .logo img {
@@ -45,6 +47,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      animation: slideInUp 2s; /* add slide-in-up animation to social links */
     }
     
     .social-links a {
@@ -65,19 +68,54 @@
       text-align: center;
       color: #fff; /* change text color to white */
       font-size: 18px; /* reduced font size */
+      animation: fadeInUp 2s; /* add fade-in-up animation to header text */
     }
     
     .header-text h1, .header-text p {
       color: #fff; /* change text color to white */
     }
     
-    .visitors-icon {
-      position: absolute;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 24px;
-      color: #fff;
+    /* Add animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideInUp {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(20%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -88,9 +126,6 @@
   <div class="header-text">
     <h1 style="font-variant: small-caps; font-size: 24px;">Welcome, This Is Rahul Kumar!</h1>
     <p style="font-variant: small-caps; font-size: 18px;">This is a showcase of my projects and skills.</p>
-  </div>
-  <div class="visitors-icon">
-    <i class="fas fa-eye"></i> 100 visitors
   </div>
   <div class="social-links">
     <a href="https://t.me/your-telegram-username" target="_blank">
