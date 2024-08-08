@@ -22,8 +22,7 @@
     .logo {
       position: absolute;
       top: 20px;
-      left: 50%;
-      transform: translate(-50%, 0); /* update transform to use translate(-50%, 0) */
+      left: 20px;
       width: 60px;
       height: 60px;
       border-radius: 70%;
@@ -36,6 +35,35 @@
       height: 100%; /* set image height to 100% of the logo container */
       object-fit: cover; /* scale the image to cover the entire logo container */
       border-radius: 50%; /* add border radius to the image to match the logo container */
+    }
+    
+    .header-text {
+      position: absolute;
+      top: 20px;
+      left: 90px;
+      text-align: left;
+      color: #fff; /* change text color to white */
+      font-size: 24px; /* reduced font size */
+    }
+    
+    .header-text h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    
+    .header-text p {
+      font-size: 20px;
+    }
+    
+    .quote {
+      position: absolute;
+      top: 120px;
+      left: 20px;
+      text-align: left;
+      color: #FFFFFF;
+      font-size: 20px;
+      font-style: small-caps;
+      width: 80%;
     }
     
     .social-links {
@@ -56,35 +84,6 @@
       width: 24px;
       height: 24px;
       filter: invert(1); /* invert the icon color to white */
-    }
-    
-    .header-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #fff; /* change text color to white */
-      font-size: 24px; /* reduced font size */
-    }
-    
-    .header-text h1 {
-      font-size: 28px;
-    }
-    
-    .header-text p {
-      font-size: 20px;
-    }
-    
-    .quote {
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #FFFFFF;
-      font-size: 20px;
-      font-style: small-caps;
     }
     
     /* Media query for screens with a minimum width of 320px */
@@ -108,7 +107,7 @@
       
       .quote {
         font-size: 16px;
-        top: 80%;
+        top: 150px;
       }
     }
   </style>
@@ -122,7 +121,7 @@
     <p style="font-variant: small-caps;">This is a showcase of my projects and skills.</p>
   </div>
   <div class="quote">
-    <p style="font-style: small-caps;">Contact Me To Build This Type Web Page At Cheap Price</p>
+    <p style="font-style: small-caps;">Contact Me To Build This Type Web Page At Cheap Price. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
   <div class="social-links">
     <a href="https://t.me/itzme_dear" target="_blank">
