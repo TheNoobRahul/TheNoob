@@ -1,62 +1,114 @@
+---
+layout: default
+---
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home | [Your Name]</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Neon theme styles */
-        body {
-            background-color: #212121;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .neon {
-            color: #33ccff;
-            text-shadow: 0 0 10px #33ccff, 0 0 20px #33ccff, 0 0 30px #33ccff;
-        }
-        .logo {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin: 20px;
-            box-shadow: 0 0 10px #33ccff, 0 0 20px #33ccff, 0 0 30px #33ccff;
-        }
-        .intro {
-            text-align: center;
-            padding: 20px;
-        }
-        .links {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .links a {
-            text-decoration: none;
-            color: #33ccff;
-        }
-        .links a:hover {
-            color: #66ffff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Theme for GitHub Pages</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
+  <style>
+    /* Global styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    /* Logo circle */
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #333;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    /* Introduction section */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .intro h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    /* Live text animation */
+    .live-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #66d9ef;
+      animation: live-text 2s infinite;
+    }
+    @keyframes live-text {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .logo {
+        width: 80px;
+        height: 80px;
+      }
+      .logo img {
+        width: 60px;
+        height: 60px;
+      }
+      .intro {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <h1 class="neon">[Your Name]</h1>
-    </header>
-    <div class="intro">
-        <p class="neon">Welcome to my corner of the internet!</p>
-        <p>I'm [Your Name], a [Your Profession/Student/Enthusiast] with a passion for [Your Interests].</p>
-    </div>
-    <div class="links">
-        <p>Get in touch with me:</p>
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="https://github.com/[Your GitHub Username]" target="_blank">GitHub</a></li>
-            <li><a href="https://twitter.com/[Your Twitter Username]" target="_blank">Twitter</a></li>
-            <li><a href="mailto:[Your Email Address]">Email</a></li>
-        </ul>
-    </div>
+  <!-- Logo circle -->
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+  </div>
+  <!-- Introduction section -->
+  <div class="intro">
+    <h1>Welcome to my GitHub Pages site!</h1>
+    <p>This is a sample page using the Live theme.</p>
+    <span class="live-text">Live</span>
+  </div>
+  <!-- Add your content here -->
+  <section>
+    <!-- Add your content, such as paragraphs, lists, images, etc. -->
+  </section>
 </body>
 </html>
