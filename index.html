@@ -1,134 +1,73 @@
----
-layout: default
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Neon Theme for GitHub Pages</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
-  <style>
-    /* Global styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #212121; /* Dark background for Live Neon theme */
-      color: #fff; /* White text color */
-    }
-    /* Logo circle */
-    .logo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background-color: #333;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .logo img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-    }
-    /* Introduction section */
-    .intro {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px;
-      background-color: #333; /* Dark background for intro section */
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    .intro h1 {
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #66d9ef; /* Neon blue color for headings */
-    }
-    .intro p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      color: #fff; /* White text color */
-    }
-    /* Live text animation */
-    .live-text {
-      font-size: 24px;
-      font-weight: 700;
-      color: #66d9ef; /* Neon blue color for live text */
-      animation: live-text 2s infinite;
-    }
-    @keyframes live-text {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-    /* Buttons */
-    .btn {
-      background-color: #66d9ef; /* Neon blue color for buttons */
-      color: #fff; /* White text color */
-      border: none;
-      padding: 10px 20px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #44c7f5; /* Hover effect for buttons */
-    }
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .logo {
-        width: 80px;
-        height: 80px;
-      }
-      .logo img {
-        width: 60px;
-        height: 60px;
-      }
-      .intro {
-        padding: 20px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s ease;
+        }
+        body.dark {
+            color: #ddd;
+            background-color: #222;
+        }
+        h1 {
+            text-transform: small-caps;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            background-image: url('logo.png');
+            background-size: cover;
+        }
+        .social-links {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-around;
+            width: 200px;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 2em;
+        }
+        .social-links a:hover {
+            color: #666;
+        }
+        .dark .social-links a {
+            color: #ddd;
+        }
+        .dark .social-links a:hover {
+            color: #bbb;
+        }
+    </style>
 </head>
 <body>
-  <!-- Logo circle -->
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
-  </div>
-  <!-- Introduction section -->
-  <div class="intro">
-    <h1>Welcome to my GitHub Pages site!</h1>
-    <p>This is a sample page using the Live Neon theme.</p>
-    <span class="live-text">Live</span>
-    <!-- Contact links and buttons -->
-    <p>
-      <a href="mailto:your_email@example.com" class="btn">Contact me</a>
-      <a href="https://twitter.com/your_twitter_handle" class="btn">Twitter</a>
-      <a href="https://github.com/your_github_username" class="btn">GitHub</a>
-    </p>
-  </div>
-  <!-- Add your content here -->
-  <section>
-    <!-- Add your content, such as paragraphs, lists, images, etc. -->
-  </section>
+    <div class="logo"></div>
+    <h1>Welcome to my GitHub Page!</h1>
+    <button id="toggle-theme">Switch to dark mode</button>
+    <div class="social-links">
+        <a href="https://t.me/your_telegram_link" target="_blank"><img src="telegram.png" alt="Telegram"></a>
+        <a href="https://wa.me/your_whatsapp_number" target="_blank"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://www.facebook.com/your_facebook_link" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/your_instagram_link" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+    <script>
+        const toggleTheme = document.getElementById('toggle-theme');
+        toggleTheme.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            toggleTheme.textContent = document.body.classList.contains('dark') ? 'Switch to light mode' : 'Switch to dark mode';
+        });
+    </script>
 </body>
 </html>
