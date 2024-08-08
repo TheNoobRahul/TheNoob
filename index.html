@@ -7,7 +7,7 @@ layout: default
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Theme for GitHub Pages</title>
+  <title>Live Neon Theme for GitHub Pages</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
   <style>
@@ -19,8 +19,8 @@ layout: default
     }
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
+      background-color: #212121; /* Dark background for Live Neon theme */
+      color: #fff; /* White text color */
     }
     /* Logo circle */
     .logo {
@@ -48,24 +48,26 @@ layout: default
       flex-direction: column;
       align-items: center;
       padding: 40px;
-      background-color: #fff;
+      background-color: #333; /* Dark background for intro section */
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
     .intro h1 {
       font-size: 36px;
       font-weight: 700;
       margin-bottom: 10px;
+      color: #66d9ef; /* Neon blue color for headings */
     }
     .intro p {
       font-size: 18px;
       margin-bottom: 20px;
+      color: #fff; /* White text color */
     }
     /* Live text animation */
     .live-text {
       font-size: 24px;
       font-weight: 700;
-      color: #66d9ef;
+      color: #66d9ef; /* Neon blue color for live text */
       animation: live-text 2s infinite;
     }
     @keyframes live-text {
@@ -78,6 +80,18 @@ layout: default
       100% {
         opacity: 0;
       }
+    }
+    /* Buttons */
+    .btn {
+      background-color: #66d9ef; /* Neon blue color for buttons */
+      color: #fff; /* White text color */
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #44c7f5; /* Hover effect for buttons */
     }
     /* Responsive design */
     @media (max-width: 768px) {
@@ -103,8 +117,14 @@ layout: default
   <!-- Introduction section -->
   <div class="intro">
     <h1>Welcome to my GitHub Pages site!</h1>
-    <p>This is a sample page using the Live theme.</p>
+    <p>This is a sample page using the Live Neon theme.</p>
     <span class="live-text">Live</span>
+    <!-- Contact links and buttons -->
+    <p>
+      <a href="mailto:your_email@example.com" class="btn">Contact me</a>
+      <a href="https://twitter.com/your_twitter_handle" class="btn">Twitter</a>
+      <a href="https://github.com/your_github_username" class="btn">GitHub</a>
+    </p>
   </div>
   <!-- Add your content here -->
   <section>
