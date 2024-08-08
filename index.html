@@ -25,11 +25,16 @@
       transform: translateX(-50%);
       width: 60px;
       height: 60px;
-      background-image: url('https://graph.org//file/aa2262005b8816af73284.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden; /* add overflow hidden to contain the image */
+    }
+    
+    .logo img {
+      width: 100%; /* set image width to 100% of the logo container */
+      height: 100%; /* set image height to 100% of the logo container */
+      object-fit: cover; /* scale the image to cover the entire logo container */
+      border-radius: 50%; /* add border radius to the image to match the logo container */
     }
     
     .social-links {
@@ -49,6 +54,7 @@
     .social-links img {
       width: 24px;
       height: 24px;
+      filter: invert(1); /* invert the icon color to white */
     }
     
     .header-text {
@@ -57,12 +63,19 @@
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
+      color: #fff; /* change text color to white */
       font-size: 18px; /* reduced font size */
+    }
+    
+    .header-text h1, .header-text p {
+      color: #fff; /* change text color to white */
     }
   </style>
 </head>
 <body>
-  <div class="logo"></div>
+  <div class="logo">
+    <img src="https://graph.org//file/7c966b01350d4416fbe12.jpg" alt="Logo">
+  </div>
   <div class="header-text">
     <h1 style="font-variant: small-caps; font-size: 24px;">Welcome to my portfolio!</h1>
     <p style="font-variant: small-caps; font-size: 18px;">This is a showcase of my projects and skills.</p>
