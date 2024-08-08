@@ -12,7 +12,6 @@
       font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
-      transition: background-color 0.4s;
     }
     
     .logo {
@@ -27,42 +26,6 @@
       background-repeat: no-repeat;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    
-    .dark-mode-switch {
-      position: absolute;
-      top: 90px;
-      left: 50%;
-      transform: translateX(-50%);
-      cursor: pointer;
-    }
-    
-    .dark-mode-switch button {
-      background-color: #fff;
-      border: none;
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-    
-    .dark-mode-switch button:hover {
-      background-color: #333;
-      color: #fff;
-    }
-    
-    .dark-mode-switch button svg {
-      width: 20px;
-      height: 20px;
-    }
-    
-    body.dark-mode {
-      background-color: #333;
-      color: #fff;
-    }
-    
-    body.dark-mode .dark-mode-switch button {
-      background-color: #333;
-      color: #fff;
     }
     
     .social-links {
@@ -90,22 +53,15 @@
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
+      font-size: 18px; /* reduced font size */
     }
   </style>
 </head>
 <body>
   <div class="logo"></div>
-  <div class="dark-mode-switch">
-    <button>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="5" y="5" width="10" height="10" rx="2" fill="#fff" />
-        <circle cx="12" cy="12" r="4" fill="#fff" />
-      </svg>
-    </button>
-  </div>
   <div class="header-text">
-    <h1 style="font-variant: small-caps;">Welcome to my portfolio!</h1>
-    <p style="font-variant: small-caps;">This is a showcase of my projects and skills.</p>
+    <h1 style="font-variant: small-caps; font-size: 24px;">Welcome to my portfolio!</h1>
+    <p style="font-variant: small-caps; font-size: 18px;">This is a showcase of my projects and skills.</p>
   </div>
   <div class="social-links">
     <a href="https://t.me/your-telegram-username" target="_blank">
@@ -122,11 +78,5 @@
     </a>
   </div>
   <!-- Add your content here -->
-  <script>
-    const darkModeSwitch = document.querySelector('.dark-mode-switch button');
-    darkModeSwitch.addEventListener('click', (◕) => {
-     document.body.classList.toggle('dark-mode');
-    });
-  </script>
 </body>
 </html>
