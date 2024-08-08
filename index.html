@@ -28,7 +28,6 @@
       border-radius: 70%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       overflow: hidden; /* add overflow hidden to contain the image */
-      animation: bounceIn 2s; /* add bounce-in animation to logo */
     }
     
     .logo img {
@@ -66,34 +65,21 @@
       text-align: center;
       color: #fff; /* change text color to white */
       font-size: 18px; /* reduced font size */
-      animation: fadeInUp 2s; /* add fade-in-up animation to header text */
     }
     
     .header-text h1, .header-text p {
       color: #fff; /* change text color to white */
     }
     
-    /* Add animations */
-    @keyframes bounceIn {
-      0% {
-        transform: scale(0);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(0);
-        opacity: 1;
-      }
-    }
-    
-    @keyframes fadeInUp {
-      0% {
-        transform: translateY(0);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    .quote {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      font-size: 24px;
+      font-style: italic;
     }
   </style>
 </head>
@@ -102,8 +88,12 @@
     <img src="https://graph.org//file/ef970b47124b6898c14fa.jpg" alt="Logo">
   </div>
   <div class="header-text">
-    <h1 style="font-variant: small-caps; font-size: 24px;">Welcome, This Is Rahul Kumar!</h1>
+    <h1 style="font-variant: small-caps; font-size: 22px;">Welcome, This Is Rahul Kumar!</h1>
     <p style="font-variant: small-caps; font-size: 18px;">This is a showcase of my projects and skills.</p>
+  </div>
+  <div class="quote">
+    <a href="https://t.me/noob_bholu" target="_blank">
+    <p style="font-style: italic; font-size: 12px;">Contact Me To Build This Type Web Page At Cheap Price</p>
   </div>
   <div class="social-links">
     <a href="https://t.me/itzme_dear" target="_blank">
